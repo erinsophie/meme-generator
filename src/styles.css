@@ -1,0 +1,61 @@
+/* css reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  color: #ffffff;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --purple-gradient: linear-gradient(#672280, #a626d3);
+}
+
+/* header */
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 7px;
+  background: var(--purple-gradient);
+}
+
+.header-title {
+    font-size: 1.2rem;
+}
