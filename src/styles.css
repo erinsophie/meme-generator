@@ -46,6 +46,11 @@ h6 {
   --purple-gradient: linear-gradient(#672280, #a626d3);
 }
 
+body {
+    height: 100vh;
+    border: 1px solid red;
+}
+
 /* header */
 
 .header {
@@ -57,5 +62,38 @@ h6 {
 }
 
 .header-title {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+}
+
+/* form */
+
+.main {
+  border: 1px solid red;
+  padding: 30px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #d5d4d8;
+}
+
+.form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.form-btn {
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--purple-gradient);
 }
