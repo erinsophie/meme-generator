@@ -46,11 +46,6 @@ h6 {
   --purple-gradient: linear-gradient(#672280, #a626d3);
 }
 
-body {
-    height: 100vh;
-    border: 1px solid red;
-}
-
 /* header */
 
 .header {
@@ -65,11 +60,13 @@ body {
   font-size: 1.2rem;
 }
 
-/* form */
+/* main */
 
 .main {
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
   padding: 30px;
+  gap: 20px;
 }
 
 .input-container {
@@ -84,16 +81,49 @@ input {
   border: 2px solid #d5d4d8;
 }
 
-.form {
-  display: flex;
-  gap: 20px;
-  flex-direction: column;
-}
-
-.form-btn {
+.btn {
   color: #ffffff;
   border: none;
   padding: 10px;
   border-radius: 10px;
   background: var(--purple-gradient);
+  cursor: pointer;
+}
+
+.meme-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.meme-img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 3px;
+}
+
+.meme-text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
 }
