@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 function Main() {
   const [meme, setMeme] = useState({
-    topText: "",
-    bottomText: "",
-    randomImage: "http://i.imgflip.com/1bij.jpg",
+    topText: '',
+    bottomText: '',
+    randomImage: 'http://i.imgflip.com/1bij.jpg',
   });
 
-  const [allMemes, setAllMemes] = useState({});
+  const [allMemes, setAllMemes] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.imgflip.com/get_memes")
+    fetch('https://api.imgflip.com/get_memes')
       .then((response) => response.json())
       .then((memesData) => setAllMemes(memesData.data.memes));
   }, []);
@@ -41,7 +41,7 @@ function Main() {
           name="topText"
           onChange={handleChange}
           value={meme.topText}
-        ></input>
+        />
 
         <input
           type="text"
@@ -49,7 +49,7 @@ function Main() {
           name="bottomText"
           onChange={handleChange}
           value={meme.bottomText}
-        ></input>
+        />
       </div>
 
       <button className="btn" onClick={getMemeImg}>
@@ -57,11 +57,7 @@ function Main() {
       </button>
 
       <div className="meme-img-container">
-        <img
-          src={meme.randomImage}
-          alt="random meme"
-          className="meme-img"
-        ></img>
+        <img src={meme.randomImage} alt="random meme" className="meme-img" />
         <h2 className="meme-text top">{meme.topText}</h2>
         <h2 className="meme-text bottom">{meme.bottomText}</h2>
       </div>

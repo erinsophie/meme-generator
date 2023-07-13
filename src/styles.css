@@ -12,17 +12,12 @@
   font-family: "Karla", sans-serif;
 }
 
-body {
-  color: #ffffff;
-}
-
 img,
 picture,
 video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
 }
 
 input,
@@ -62,7 +57,15 @@ h6 {
 
 /* main */
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
 .main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -126,4 +129,13 @@ input {
 
 .bottom {
   bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: #7C7C7C;
+  padding: 20px;
+  margin-bottom: auto;
+  background-color: #F1F1F1;
 }
